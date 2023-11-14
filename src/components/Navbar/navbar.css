@@ -1,5 +1,6 @@
 .navbar
 {
+    background: rgb(30, 30, 30);
     height: 5rem;
     width: 100vw;
     max-width: 75rem;
@@ -11,11 +12,14 @@
     position: sticky;
     top: 0;
     z-index: 3;
+    /* border-radius: 1rem; */
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
 }
 
 .logo
 {
-    /* object-fit: cover; */
+    object-fit: cover;
     height: 3rem;
     width: 4rem;
 }
@@ -43,6 +47,7 @@
     border: none;
     padding: 0 1rem;
     border-radius: 2rem;
+    cursor: pointer;
 }
 
 .desktopMenuImg
