@@ -16,17 +16,22 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_g2h89u7', 'template_25d2h7v', form.current, 'lk49pExSNV-IWC5Kd')
+        console.log(form);
+        console.log(form.current);
+        e.target.reset();
+        const message = document.getElementsByName('message').forEach(e => e.value);
+        console.log(message);
+
+        emailjs.sendForm('service_g2h897', 'template_25d2h7v', form.current, 'lk49pExSNV-IWC5Kd')
           .then((result) => 
           {
                 console.log(result.text);
                 alert('Email sent successfully');
-                e.target.reset();
             }, 
             (error) => 
             {
                 console.log(error.text);
-                alert(error.text);
+                alert("Couldn't send email");
             });
     }
 
