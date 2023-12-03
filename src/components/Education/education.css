@@ -1,0 +1,69 @@
+#educations
+{
+    margin: 0 auto;
+    min-height: calc(100vh - 4rem);
+    width: 100vw;
+    min-width: 1000px;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.educationTitle
+{
+    font-size: 3rem;
+    padding-top: 1.5rem;
+    margin: 1.5rem auto;
+    font-weight: 600;
+}
+
+.educationWrapper
+{
+    padding: 0 10rem 0 5rem;
+}
+
+.education
+{
+    width: 80vw;
+    margin: 1rem;
+    padding: 1.8rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    background: rgb(50, 50, 50);
+}
+
+.educationField
+{
+    font-size: 1.75rem;
+}
+
+.educationImg
+{
+    object-fit: cover;
+    /* height: 25vh;
+    width: 25vh; */
+    margin-right: 5rem;
+    border-radius: 100%;
+}
+
+.educationText
+{
+    text-align: left;
+}
+
+.educationDesc
+{
+    font-weight: lighter;
+    margin-top: 1rem;
+    /* font-size: 1.1vw; */
+}
+
+.educationCompany
+{
+    font-size: larger;
+    font-weight: 700;
+}
