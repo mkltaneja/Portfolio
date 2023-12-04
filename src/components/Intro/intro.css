@@ -7,6 +7,14 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    /* opacity: 0; */
+    /* transition: opacity 1s ease; */
+    transition: padding 1.8s ease-in-out;
+}
+
+#intro.fade-in
+{
+    opacity: 1;
 }
 
 .bg
