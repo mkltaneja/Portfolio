@@ -16,23 +16,28 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_g2h89u7', 'template_25d2h7v', form.current, 'lk49pExSNV-IWC5Kd')
+        console.log(form);
+        console.log(form.current);
+        e.target.reset();
+        const message = document.getElementsByName('message').forEach(e => e.value);
+        console.log(message);
+
+        emailjs.sendForm('service_g2h897', 'template_25d2h7v', form.current, 'lk49pExSNV-IWC5Kd')
           .then((result) => 
           {
                 console.log(result.text);
                 alert('Email sent successfully');
-                e.target.reset();
             }, 
             (error) => 
             {
                 console.log(error.text);
-                alert(error.text);
+                alert("Couldn't send email");
             });
     }
 
   return (
     <section id='contactPage'>
-        <div id='clients'>
+        {/* <div id='clients'>
             <h1 className='contactPageTitle'>My Clients</h1>
             <p className='clientDesc'>
                 I have had the opportunity to work with a diverse group of companies.
@@ -44,7 +49,7 @@ const Contact = () => {
             <img src={Microsoft} alt='Client' className='clientImg' />
             <img src={Facebook} alt='Client' className='clientImg' />
             </div>
-        </div>
+        </div> */}
         <div id='contact'>
             <h1 className='contactPageTitle'>Contact Me</h1>
             <span className='contactDesc'> Please fill out the form below to discuss any work opportunities</span>

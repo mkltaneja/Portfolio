@@ -25,6 +25,9 @@
     height: 3rem;
     width: 4rem;
     left: 3%;
+    /* rotate: calc(180deg); */
+    /* rotateY: 1; */
+    transform: rotateX(180deg);
 }
 
 .desktopMenuListItem
@@ -52,6 +55,15 @@
     border-radius: 2rem;
     right: 2rem;
     cursor: pointer;
+    transition: transform .2s;
+}
+
+
+.desktopMenuBtn:hover 
+{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
 }
 
 .desktopMenuImg
@@ -81,14 +93,37 @@
     min-width: 15rem;
     background: rgb(40, 40, 40);
     border-radius: 1rem;
+    transition: all 0.3s ease; /* Apply transition to achieve smooth animation */
+    transform: scale(1); /* Initially, scale it down to hide */
+}
+
+
+.navMenu.show
+{
+    transform: scale(0);
+}  
+
+.listItem:hover
+{
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid yellow;
 }
 
 .mobMenu
 {
-    display: none;
+    /* display: none; */
     object-fit: cover;
     height: 1.8rem;
     cursor: pointer;
+    transition: transform .2s;
+}
+
+.mobMenu:hover 
+{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
 }
 
 .listItem
@@ -100,15 +135,6 @@
     border-radius: 1rem;
     cursor: pointer;
 }
-
-/* @media screen and (max-width: 1240px)
-{
-    .desktopMenuBtn
-    {
-        position: fixed;
-        margin-left: auto;
-    }
-} */
 
 @media screen and (max-width: 720px) 
 {

@@ -14,13 +14,64 @@
     padding: 0 1rem;
 }
 
-.worksTilte
+.worksTitle
 {
-    margin: 1rem 0;
+    padding-top: 1.5rem;
+    margin: 1.5rem auto;
     font-size: 3rem;
+    font-weight: 600;
 }
 
-.worksDesc
+.workExWrapper
+{
+    padding: 0 10rem 0 5rem;
+}
+
+.workEx
+{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background: rgb(50, 50, 50);
+}
+
+.workExTitle
+{
+    font-size: 1.75rem;
+}
+
+.workExImg
+{
+    object-fit: cover;
+    height: 25vh;
+    width: 25vh;
+    margin-right: 5rem;
+    border-radius: 100%;
+}
+
+.workExText
+{
+    text-align: left;
+}
+
+.workExDesc
+{
+    font-weight: lighter;
+    margin-top: 1rem;
+    /* font-size: 1.1rem; */
+}
+
+.workExCompany
+{
+    font-size: larger;
+    font-weight: 700;
+}
+
+/* .worksDesc
 {
     font-weight: 300;
     font-size: 1rem;
@@ -60,4 +111,4 @@
     {
         height: 48vw;
     }
-}
+} */
