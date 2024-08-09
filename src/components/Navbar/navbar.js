@@ -15,6 +15,23 @@ const Navbar = () => {
       setShowMenu(false);
   }
 
+  const handleHamClicked = () => {
+    if(showMenu)
+    {
+      // var navMenu = document.getElementsByClassName('navMenu');
+      var navMenu = document.querySelector('.navMenu');
+      console.log(navMenu);
+      // console.log(navMenu.);
+      navMenu.classList.add('hideItem');
+      setTimeout(() => {
+        navMenu.classList.remove('hideItem');
+        setShowMenu(false);
+      }, 500);
+    }
+    else
+      setShowMenu(true);
+  }
+
   useEffect(() => {
     document.addEventListener('click', handleClickOutsideMenu);
     return () => {
@@ -47,7 +64,7 @@ const Navbar = () => {
             Contact Me
         </button>
 
-        <img src={menu} alt='Menu' className='mobMenu' ref={mobMenuRef} onClick={() => setShowMenu(!showMenu)} />
+        <img src={menu} alt='Menu' className='mobMenu' ref={mobMenuRef} onClick={() => handleHamClicked()} />
         <div className='navMenu' style={{display: showMenu? 'flex' : 'none'}}>
             <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-80} duration={600} className='listItem' onClick={() => setShowMenu(false)}>Home</Link>
             <Link activeClass='active' to='works' spy={true} smooth={true} offset={-80} duration={600} className='listItem' onClick={() => setShowMenu(false)}>Work</Link>

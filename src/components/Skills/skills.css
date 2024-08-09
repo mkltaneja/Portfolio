@@ -4,7 +4,7 @@
     min-height: calc(100vh - 4rem);
     overflow: hidden;
     width: 100vw;
-    min-width: 1000px;
+    /* min-width: 1000px; */
     padding: 0 1rem;
     /* max-width: 65rem; */
     display: flex;
@@ -24,7 +24,7 @@
 
 .skillBars
 {
-    padding: 0 10rem 0 5rem;
+    /* padding: 0 10rem 0 5rem; */
 }
 
 .skillBar

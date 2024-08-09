@@ -11,16 +11,29 @@ import InstagramIcon from '../../assets/instagram-icon.png';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-    const form = useRef();
+    const form = useRef(null);
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        console.log(form);
-        console.log(form.current);
-        e.target.reset();
-        const message = document.getElementsByName('message').forEach(e => e.value);
+        // e.target.reset();
+        console.log(e.target);
+        var email = document.getElementsByName('your_email').forEach(e => e.value);
+        var message = document.getElementsByName('message').forEach(e => e.value);
+        document.getElementsByName('message').forEach(e => console.log(e.value));
         console.log(message);
+        if(!email || email.trim().length == 0)
+        {
+            e.preventDefault();
+            window.alert('Please enter your email');
+            console.log(message);
+            return false;
+        }
+        if(!message || message.trim().length == 0)
+        {
+            window.alert('Message is empty');
+            return false;
+        }
 
         emailjs.sendForm('service_g2h897', 'template_25d2h7v', form.current, 'lk49pExSNV-IWC5Kd')
           .then((result) => 
@@ -55,8 +68,8 @@ const Contact = () => {
             <span className='contactDesc'> Please fill out the form below to discuss any work opportunities</span>
             <form className='contactForm' ref={form} onSubmit={sendEmail}>
                 <input type='text' className='name' placeholder='Your Name' name='from_name' />
-                <input type='email' className='email' placeholder='Your Email' name='your_email' />
-                <textarea className='msg' name='message' rows='5' placeholder='Your Message'></textarea>
+                <input type='email' className='email' placeholder='Your Email*' name='your_email' />
+                <textarea className='msg' name='message' rows='5' placeholder='Your Message*'></textarea>
                 <button type='submit' value='Send' className='submitBtn'>Submit</button>
                 <div className='socialLinks'>
                 <img src={FacebookIcon} alt='Facebook' className='socialLink'></img>

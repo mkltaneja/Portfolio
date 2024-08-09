@@ -3,7 +3,7 @@
     height: calc(100vh - 4rem);
     min-height: 660px;
     width: 100vw;
-    min-width: 1000px;
+    /* min-width: 1000px; */
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -17,7 +17,7 @@
     opacity: 1;
 }
 
-.bg
+.profileImage
 {
     min-height: 660px;
     position: absolute;
@@ -57,7 +57,7 @@
     font-size: medium;
     font-weight: 300;
     letter-spacing: 1px;
-    width: 40vw;
+    width: 50vw;
 }
 
 .resumeBtn
@@ -70,12 +70,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s;
 }
 
 .resumeBtn:hover
 {
     background: yellow;
     cursor: pointer;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); 
 }
 
 .resumeIcon
@@ -85,9 +89,16 @@
     height: 1.3rem;
 }
 
+.externalLink
+{
+    object-fit: cover;
+    margin-left: 0.8rem;
+    height: 0.7rem;
+}
+
 @media screen and (max-width:1295px)
 {
-    .bg
+    .profileImage
     {
         right: -10vw;
     }
@@ -100,3 +111,11 @@
         font-size: 2.5vw;
     }
 }
+
+/* @media screen and (max-width:1000px)
+{
+    .profileImage
+    {
+        right: -10vw;
+    }
+} */

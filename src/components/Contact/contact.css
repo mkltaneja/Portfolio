@@ -2,7 +2,7 @@
 {
     min-height: (100vh - 4rem);
     width: 100vw;
-    min-width: 60rem;
+    /* min-width: 60rem; */
     margin: 0 auto;
     text-align: center;
     display: flex;
