@@ -2,16 +2,40 @@
 {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     text-decoration: none;
     background: transparent;
     font-family: 'Poppins', sans-serif;
 }
 
+html
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 body
 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* min-width: 100vw; */
     background: rgb(30, 30, 30);
     color: white;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.title
+{
+    font-size: 3rem;
+    padding-top: 1.5rem;
+    margin: 3rem 0 2rem 0;
+    font-weight: 600;
+}
+
+.heading
+{
+    font-size: 1.7rem;
 }
